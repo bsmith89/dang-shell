@@ -60,9 +60,9 @@ PATH to run:
 -   Pipe everything together
     -   `cut -f 1 res/mouse.sample-01.human-blastp.tsv | sort | uniq | wc -l`
 -   (TD) Think/pair/share What are the pros/cons of the piping approach?
--   (?) How would we count the number of unique references hit in sample-01?
+-   (?) How would we count the number of unique _references_ hit in sample-01?
 -   Up arrow for history.
--   (TD) Count the number of unique query sequences in sample-02?
+-   (TD) Count the number of unique query sequences in _sample-02_?
 
 ### Put our command into a script (et: 5)
 
@@ -75,14 +75,14 @@ PATH to run:
 
 ### Repeat our command for all of the samples (et: 5)
 
--   (?) What's wrong with typing it out for each file?
+-   (?) What's the problem with typing it out for each file?
 -   `for file in res/mouse.sample*.human-blastp.tsv; do bash scripts/count_uniq_queries.sh $file; done`
 -   Keyboard shortcuts:
     -   `<C-r>`, `<M-b>`, `<M-f>`, `<M-d>`, etc.
 
 ### Filtering low identity hits (et: 5)
 
--   (TD) T/P/S What's challenging about filtering your data using Excel?
+-   (TD) T/P/S What's challenging about filtering these data using Excel?
 -   Only hits that had higher than 90% identity:
     `awk '$3 > 90' res/mouse.sample-01.human-blastp.tsv | head`
 -   (?) How would we filter for bitscores over 500?
