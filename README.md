@@ -70,12 +70,15 @@ PATH to run:
 -   (?) What's wrong with `cut -f 1 res/mouse.sample-01.human-blastp.tsv | sort | uniq | wc -l`?
 -   `cut -f 1 $1 | sort | uniq | wc -l`
 -   `<C-x>` -> `Y` -> `<CR>` (to exit nano and save the file).
+-   `bash scripts/count_uniq_queries.sh res/mouse.sample-01.human-blastp.tsv`
 -   Add documentation (and a shebang?)
 
 ### Repeat our command for all of the samples (et: 5)
 
 -   (?) What's wrong with typing it out for each file?
 -   `for file in res/mouse.sample*.human-blastp.tsv; do bash scripts/count_uniq_queries.sh $file; done`
+-   Keyboard shortcuts:
+    -   `<C-r>`, `<M-b>`, `<M-f>`, `<M-d>`, etc.
 
 ### Filtering low identity hits (et: 5)
 
@@ -99,11 +102,11 @@ PATH to run:
 -   `grep -B1 'FER' seq/mouse.sample-01.fa | wc -l`
 -   `grep -B1 'FER' seq/mouse.sample-01.fa | less`
 -   `grep -B1 'FER' seq/mouse.sample-01.fa | sed '/^--$/d' | wc -l`
+-   (TD) Pull sequences from all of the samples which include the '`FER`' motif and
+    save them to a file.
 
 ### Summary of what we covered (et: 5)
 
 ### Questions?
 
 ### Stay after for TMUX?
-
-
