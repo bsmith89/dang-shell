@@ -1,8 +1,8 @@
 mkdir -p raw ref seq res
 wget -P raw/ 'ftp://ftp.ncbi.nih.gov/refseq/H_sapiens/mRNA_Prot/human.*.protein.faa.gz'
-gunzip -c raw/human.*.protein.faa.gz | seqtk seq -l0 > ref/human.fa
+gunzip -c raw/human.*.protein.faa.gz | seqtk seq -l 0 > ref/human.fa
 wget -P raw/ 'ftp://ftp.ncbi.nih.gov/refseq/M_musculus/mRNA_Prot/mouse.*.protein.faa.gz'
-gunzip -c raw/mouse.*.protein.faa.gz | seqtk seq -l0 > ref/mouse.fa
+gunzip -c raw/mouse.*.protein.faa.gz | seqtk seq -l 0 > ref/mouse.fa
 
 diamond makedb --in ref/human.fa --db ref/human.fa
 for number in `seq -w 01 10`; do
