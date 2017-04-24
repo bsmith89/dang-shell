@@ -25,7 +25,7 @@ PATH to run:
 
 -   `for dotfile in ~/.{bashrc,bashrc_local,bashrc,bash_aliases,tmux.conf}; do mv $dotfile ${dotfile}~; done`
 -   Restart shell
--   PS1='$ '
+-   `PS1='$ '`
 
 ### Get data ready and check it out (et: 5)
 
