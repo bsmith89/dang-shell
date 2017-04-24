@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 mkdir -p raw ref seq res
 wget -P raw/ 'ftp://ftp.ncbi.nih.gov/refseq/H_sapiens/mRNA_Prot/human.*.protein.faa.gz'
 gunzip -c raw/human.*.protein.faa.gz | seqtk seq -l 0 > ref/human.fa
